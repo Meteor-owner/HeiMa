@@ -1,4 +1,4 @@
-package com.meteor.mybatisspringboot.jojo;
+package com.meteor.jojo;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;

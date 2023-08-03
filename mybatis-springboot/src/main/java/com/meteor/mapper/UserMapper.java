@@ -1,7 +1,7 @@
-package com.meteor.mybatisspringboot.mapper;
+package com.meteor.mapper;
 
+import com.meteor.jojo.User;
 import org.apache.ibatis.annotations.Mapper;
-import com.meteor.mybatisspringboot.jojo.User;
 import org.apache.ibatis.annotations.Select;
 
 import java.util.List;

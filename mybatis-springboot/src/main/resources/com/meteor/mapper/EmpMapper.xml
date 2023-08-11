@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "https://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.meteor.mapper.EmpMapper">
+    <!--定义可重用的sql语句-->
+    <sql id="commonSelect">
+        select id, username, password, name, gender, image, job, entrydate, dept_id, create_time, update_time
+    </sql>
+    
+    <update id="update2">
+        update tb_emp
+        <set>
+            <if test="username!=null">username=#{username},</if>
+            <if test="name!=null">name=#{name},</if>
+            <if test="gender!=null">gender=#{gender},</if>
+            <if test="image!=null">image=#{image},</if>
+            <if test="job!=null">job=#{job},</if>
+            <if test="entrydate!=null">entrydate=#{entrydate},</if>
+            <if test="deptId!=null">dept_id=#{deptId},</if>
+            <if test="createTime!=null">create_time=#{createTime},</if>
+            <if test="updateTime!=null">update_time=#{updateTime}</if>
+        </set>
+        where id = #{id}
+    </update>
+
+
+    <select id="getByCondition" resultType="com.meteor.jojo.Emp">
+        <!--
+            resultType:单条记录的类型
+            include: 通过refid指定sql片段
+        -->
+        <include refid="commonSelect"/>
+        from tb_emp
+        <where>
+            <if test="name!=null">
+                name like concat('%',#{name},'%')
+            </if>
+            <if test="gender!=null">
+                and gender=#{gender}
+            </if>
+            <if test="begin!=null and end!=null">
+                and entrydate between #{begin} and #{end}
+            </if>
+        </where>
+        order by update_time DESC
+    </select>
+
+    <!--批量删除(16,17,18)-->
+    <!--
+        collection: 遍历的集合
+        item: 遍历出来的元素
+        separator: 分隔待
+        open: 遍历开始前拼接的SOL片段
+        close: 遍历结束后拼接的SQL片段
+    -->
+    <delete id="deleteById">
+        delete from tb_emp where id in
+        <foreach collection="ids" item="id" separator="," open="(" close=")">
+            #{id}
+        </foreach>
+    </delete>
+</mapper>

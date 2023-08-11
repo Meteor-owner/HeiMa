@@ -1,6 +1,5 @@
 package com.example.controller;
 
-
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -22,7 +21,7 @@ public class ExampleController {
         // 假设你的上传文件为CSV文件，并且包含两列数据：Name和Age
         // 这里为了简单起见，我们只将上传的文件名传递到展示界面
         model.addAttribute("fileName", file.getOriginalFilename());
-
+        System.out.println(file.getOriginalFilename());
         // 重定向到展示数据的界面
         return "redirect:/show?fileName=" + file.getOriginalFilename();
     }

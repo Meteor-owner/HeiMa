@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="Encoding">
+    <file url="file://$PROJECT_DIR$/Credit/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/Credit/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/Demo/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/Implement/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/Implement/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/MavenProject01/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/MavenProject01/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/SpringBoot-web-req-resp/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/SpringBoot-web-req-resp/src/main/resources" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/demo1/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/mybatis-springboot/src/main/java" charset="UTF-8" />
+  </component>
+</project>

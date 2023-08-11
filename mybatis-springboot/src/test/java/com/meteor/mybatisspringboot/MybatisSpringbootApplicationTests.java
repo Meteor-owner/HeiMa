@@ -21,7 +21,7 @@ class MybatisSpringbootApplicationTests {
     public void testDelete(){
         empMapper.delete(18);
     }
-
+    @Test
     public void testInsert(){
         Emp emp = new Emp();
         emp.setUsername ("Tom2");
@@ -37,6 +37,7 @@ class MybatisSpringbootApplicationTests {
         empMapper.insert(emp);
         System.out.println(emp.getId());
     }
+
     public void testUpdate(){
         Emp emp = new Emp();
         emp.setId(22);
@@ -50,7 +51,7 @@ class MybatisSpringbootApplicationTests {
         Emp emp=empMapper.getById(20);
         System.out.println(emp);
     }
-    @Test
+
     public void testCondition(){
 //        List<Emp> list=empMapper.getByCondition("张", null,
 //                LocalDate.of(2000,10,1), LocalDate.of(2020,10,1));

@@ -1,5 +1,7 @@
 package com.implement.controller;
 
+import org.springframework.web.bind.annotation.RequestBody;
+import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 /**
@@ -7,4 +9,8 @@ import org.springframework.web.bind.annotation.RestController;
  */
 @RestController
 public class EmpController {
+    @RequestMapping("/getpost")
+    public void Getpost(@RequestBody String str){
+        System.out.println(str);
+    }
 }
